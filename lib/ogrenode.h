@@ -11,6 +11,7 @@
 #define OGRENODE_H
 
 #include "Ogre.h"
+#include "qmlogre_common.h"
 #include "ogreengine.h"
 #include <QtQuick/QSGGeometryNode>
 #include <QtQuick/QSGTextureMaterial>
@@ -28,7 +29,7 @@ class RenderTarget;
 
 class CameraNodeObject;
 
-class OgreNode : public QSGGeometryNode
+class QMLOGRE_EXPORT OgreNode : public QSGGeometryNode
 {
 public:
     OgreNode();

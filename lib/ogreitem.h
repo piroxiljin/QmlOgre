@@ -10,13 +10,14 @@
 #ifndef OGREITEM_H
 #define OGREITEM_H
 
+#include "qmlogre_common.h"
 #include "ogreengine.h"
 #include "ogrecamerawrapper.h"
 
 #include <QtQuick/QQuickItem>
 #include <QtCore/QPropertyAnimation>
 
-class OgreItem : public QQuickItem
+class QMLOGRE_EXPORT OgreItem : public QQuickItem
 {
     Q_OBJECT
 

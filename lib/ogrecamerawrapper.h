@@ -12,6 +12,8 @@
 
 #include <Ogre.h>
 
+#include "qmlogre_common.h"
+
 /**
  * @brief The OgreCameraWrapper class defines an interface
  * that allows assigning Ogre::Camera instances to OgreItem
@@ -19,7 +21,7 @@
  *
  * Implementing classes must inherit from QObject.
  */
-class OgreCameraWrapper
+class QMLOGRE_EXPORT OgreCameraWrapper
 {
 public:
     OgreCameraWrapper();

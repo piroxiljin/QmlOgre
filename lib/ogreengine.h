@@ -15,6 +15,8 @@
 #include <QOpenGLContext>
 #include <Ogre.h>
 
+#include "qmlogre_common.h"
+
 namespace Ogre {
 class Root;
 class RenderTexture;
@@ -26,7 +28,7 @@ class RenderTarget;
  * @brief The OgreEngineItem class
  * Must only be constructed from within Qt QML rendering thread.
  */
-class OgreEngine : public QObject
+class QMLOGRE_EXPORT OgreEngine : public QObject
 {
     Q_OBJECT
 

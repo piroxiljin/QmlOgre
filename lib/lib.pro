@@ -24,6 +24,7 @@ macx {
     CONFIG += link_pkgconfig
     PKGCONFIG += OGRE
 } else:win32 {
+    DEFINES += QMLOGRE_DLL
     OGREDIR = $$(OGRE_HOME)
     isEmpty(OGREDIR) {
         error(QmlOgre needs Ogre to be built. Please set the environment variable OGRE_HOME pointing to your Ogre root directory.)
@@ -63,7 +64,8 @@ HEADERS += \
     ogreitem.h \
     ogrenode.h \
     ogrecamerawrapper.h \
-    ogreengine.h
+    ogreengine.h \
+    qmlogre_common.h
 
 # Copy all headers to build folder
 Headers.path = $$OUT_PWD/include
