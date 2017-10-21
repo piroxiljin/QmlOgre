@@ -33,20 +33,11 @@ macx {
         INCLUDEPATH += $$OGREDIR/include/OGRE
         INCLUDEPATH += $$OGREDIR/include/OGRE/RenderSystems/GL
         CONFIG(release, debug|release) {
-            LIBS += -L$$OGREDIR/lib/release -L$$OGREDIR/lib/release/opt -lOgreMain -lRenderSystem_GL
+            LIBS += -L$$OGREDIR/lib/release -lOgreMain -lRenderSystem_GL
         } else {
-            LIBS += -L$$OGREDIR/lib/debug -L$$OGREDIR/lib/debug/opt -lOgreMain_d -lRenderSystem_GL_d
+            LIBS += -L$$OGREDIR/lib/debug -lOgreMain_d -lRenderSystem_GL_d
         }
-
-        BOOSTDIR = $$OGREDIR/boost_1_42
-        !isEmpty(BOOSTDIR) {
-            INCLUDEPATH += $$BOOSTDIR
-            CONFIG(release, debug|release) {
-                LIBS += -L$$BOOSTDIR/lib -llibboost_date_time-vc90-mt-1_42 -llibboost_thread-vc90-mt-1_42
-            } else {
-                LIBS += -L$$BOOSTDIR/lib -llibboost_date_time-vc90-mt-gd-1_42 -llibboost_thread-vc90-mt-gd-1_42
-            }
-        }
+        LIBS += -L$$OGREDIR/lib -L$$OGREDIR/lib/OGRE -lOpengl32
     }
 }
 
